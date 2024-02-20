@@ -1593,8 +1593,10 @@ if (BUILD_TESTING)
 endif ()
 
 if (ENABLE_CPACK)
+	include (Debian)
 	if ((NOT CPACK_PACKAGE_VERSION) AND CPACK_PACKAGE_VERSION_STAGE)
 		set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_FULL}")
 	endif ()
 	include (CPack)
 endif ()
+
