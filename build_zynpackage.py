@@ -14,7 +14,7 @@ except:
 
 mkdir("zynbuild")
 chdir("zynbuild")
-system('cmake -DBUILD_SHARED_LIBS=RELEASE -DBUILD_SHARED_LIBS=ON -DBUILD_PROGRAMS=OFF -DBUILD_EXAMPLES=OFF -DINSTALL_MANPAGES=OFF -DBUILD_TESTING=OFF -DCPACK_DEBIAN_PACKAGE_MAINTAINER=Zynthian -DCPACK_DEBIAN_PACKAGE_NAME=libsndfile1-zyndev -DCPACK_DEBIAN_PACKAGE_DESCRIPTION="libsndfile1-dev and libsndfile1 with Zynthian patches" ..')
+system('cmake -DBUILD_SHARED_LIBS=RELEASE -DBUILD_SHARED_LIBS=ON -DBUILD_PROGRAMS=OFF -DBUILD_EXAMPLES=OFF -DINSTALL_MANPAGES=OFF -DBUILD_TESTING=OFF -DCPACK_DEBIAN_PACKAGE_MAINTAINER=Zynthian -DCPACK_DEBIAN_PACKAGE_NAME=libsndfile-zyndev -DCPACK_DEBIAN_PACKAGE_DESCRIPTION="libsndfile-dev and libsndfile1 with Zynthian patches" ..')
 system('cmake --build .')
 system('cpack -G DEB')
 deb_files = glob("libsndfile-*-Linux.deb")
